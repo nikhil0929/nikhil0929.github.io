@@ -1,8 +1,7 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { Typography, Box } from '@mui/material'
+import { Box } from '@mui/material'
 import { styled } from '@mui/system';
 import { Button } from '@mui/material';
-import { motion } from "framer-motion"
 import AnimatedText from './animations/AnimatedText';
 
 
@@ -31,7 +30,7 @@ const H2Typography = styled('h2')({
 
 const name = "Nikhil Aggarwal"
 const role = "web developer"
-const description = "I'm a software engineer based in San Francisco, CA specializing in \n building (and occasionally designing) exceptional websites, \n applications, and everything in between. Currently, I am focused on \n learning about blockchain and building Web3 applications"
+const description = "I'm a software engineer specializing in building (and occasionally designing) exceptional websites, applications, and everything in between. Currently, I am focused on learning about blockchain and building Web3 applications"
 
 const splitSentence = (sentence) => {
     return sentence.split("\n").map((line, index) => {
@@ -41,7 +40,7 @@ const splitSentence = (sentence) => {
                 direction={index % 2 === 0 ? 1 : -1}
                 text={line}
                 variant="body1"
-                speed={0.01}
+                speed={0.005}
                 cursorColor="transparent"
                 duration={0.01}
             />
@@ -122,6 +121,7 @@ function LandingPage(props) {
                             onClick={() => props.moveToPage(1)}>
                             Learn more
                         </Button>
+
                     </Box>
                 </Box>
 
